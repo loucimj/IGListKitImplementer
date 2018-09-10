@@ -7,14 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		41B0A51221470797002C23DA /* IGListKitImplementer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0A51121470797002C23DA /* IGListKitImplementer.swift */; };
+		41B0A5152147167E002C23DA /* ElementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0A5132147167E002C23DA /* ElementCollectionViewCell.swift */; };
+		41B0A5162147167E002C23DA /* ElementCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41B0A5142147167E002C23DA /* ElementCollectionViewCell.xib */; };
+		41B0A518214716FC002C23DA /* ElementSectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0A517214716FC002C23DA /* ElementSectionController.swift */; };
+		41B0A53E21472136002C23DA /* IGListKitImplementerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0A53D21472136002C23DA /* IGListKitImplementerTests.swift */; };
 		41D63D9D2147071200C866B3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D63D9C2147071200C866B3 /* AppDelegate.swift */; };
 		41D63D9F2147071200C866B3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D63D9E2147071200C866B3 /* ViewController.swift */; };
 		41D63DA22147071200C866B3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D63DA02147071200C866B3 /* Main.storyboard */; };
 		41D63DA42147071400C866B3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41D63DA32147071400C866B3 /* Assets.xcassets */; };
 		41D63DA72147071400C866B3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41D63DA52147071400C866B3 /* LaunchScreen.storyboard */; };
+		92D179EB5A8B15A8049F3633 /* Pods_IGListKitImplementer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EEADD505B1CCC28AEE41BE06 /* Pods_IGListKitImplementer.framework */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		41B0A54021472136002C23DA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 41D63D912147071200C866B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 41D63D982147071200C866B3;
+			remoteInfo = IGListKitImplementer;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		1762B54768D8EC672AD602D8 /* Pods-IGListKitImplementerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGListKitImplementerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IGListKitImplementerTests/Pods-IGListKitImplementerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3E77385EAA99CCB902E82CB3 /* Pods-IGListKitImplementer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGListKitImplementer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IGListKitImplementer/Pods-IGListKitImplementer.debug.xcconfig"; sourceTree = "<group>"; };
+		41B0A51121470797002C23DA /* IGListKitImplementer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGListKitImplementer.swift; sourceTree = "<group>"; };
+		41B0A5132147167E002C23DA /* ElementCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementCollectionViewCell.swift; sourceTree = "<group>"; };
+		41B0A5142147167E002C23DA /* ElementCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ElementCollectionViewCell.xib; sourceTree = "<group>"; };
+		41B0A517214716FC002C23DA /* ElementSectionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElementSectionController.swift; sourceTree = "<group>"; };
+		41B0A53B21472136002C23DA /* IGListKitImplementerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IGListKitImplementerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		41B0A53D21472136002C23DA /* IGListKitImplementerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IGListKitImplementerTests.swift; sourceTree = "<group>"; };
+		41B0A53F21472136002C23DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41D63D992147071200C866B3 /* IGListKitImplementer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IGListKitImplementer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41D63D9C2147071200C866B3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41D63D9E2147071200C866B3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,24 +47,74 @@
 		41D63DA32147071400C866B3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41D63DA62147071400C866B3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		41D63DA82147071400C866B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55B5B6E5CF12ED69A4C419FD /* Pods-IGListKitImplementerUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGListKitImplementerUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IGListKitImplementerUITests/Pods-IGListKitImplementerUITests.release.xcconfig"; sourceTree = "<group>"; };
+		5BF8BC6C0289F4B21370BAFD /* Pods-IGListKitImplementerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGListKitImplementerTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IGListKitImplementerTests/Pods-IGListKitImplementerTests.release.xcconfig"; sourceTree = "<group>"; };
+		61BCDC69181898C185EA40CF /* Pods-IGListKitImplementerUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGListKitImplementerUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IGListKitImplementerUITests/Pods-IGListKitImplementerUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6BA636B1D2FAEE29BC5BFCA4 /* Pods-IGListKitImplementer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IGListKitImplementer.release.xcconfig"; path = "Pods/Target Support Files/Pods-IGListKitImplementer/Pods-IGListKitImplementer.release.xcconfig"; sourceTree = "<group>"; };
+		6FE2D8DDA68EB82D3B517017 /* Pods_IGListKitImplementerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IGListKitImplementerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8D34368EC430D23CE7D390EE /* Pods_IGListKitImplementerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IGListKitImplementerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEADD505B1CCC28AEE41BE06 /* Pods_IGListKitImplementer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IGListKitImplementer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		41D63D962147071200C866B3 /* Frameworks */ = {
+		41B0A53821472136002C23DA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		41D63D962147071200C866B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				92D179EB5A8B15A8049F3633 /* Pods_IGListKitImplementer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C0629ABFCED06FC43A82E6C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EEADD505B1CCC28AEE41BE06 /* Pods_IGListKitImplementer.framework */,
+				8D34368EC430D23CE7D390EE /* Pods_IGListKitImplementerUITests.framework */,
+				6FE2D8DDA68EB82D3B517017 /* Pods_IGListKitImplementerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		20B3870BFFD024563374D180 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3E77385EAA99CCB902E82CB3 /* Pods-IGListKitImplementer.debug.xcconfig */,
+				6BA636B1D2FAEE29BC5BFCA4 /* Pods-IGListKitImplementer.release.xcconfig */,
+				61BCDC69181898C185EA40CF /* Pods-IGListKitImplementerUITests.debug.xcconfig */,
+				55B5B6E5CF12ED69A4C419FD /* Pods-IGListKitImplementerUITests.release.xcconfig */,
+				1762B54768D8EC672AD602D8 /* Pods-IGListKitImplementerTests.debug.xcconfig */,
+				5BF8BC6C0289F4B21370BAFD /* Pods-IGListKitImplementerTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		41B0A53C21472136002C23DA /* IGListKitImplementerTests */ = {
+			isa = PBXGroup;
+			children = (
+				41B0A53D21472136002C23DA /* IGListKitImplementerTests.swift */,
+				41B0A53F21472136002C23DA /* Info.plist */,
+			);
+			path = IGListKitImplementerTests;
+			sourceTree = "<group>";
+		};
 		41D63D902147071200C866B3 = {
 			isa = PBXGroup;
 			children = (
 				41D63D9B2147071200C866B3 /* IGListKitImplementer */,
+				41B0A53C21472136002C23DA /* IGListKitImplementerTests */,
 				41D63D9A2147071200C866B3 /* Products */,
+				20B3870BFFD024563374D180 /* Pods */,
+				0C0629ABFCED06FC43A82E6C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -47,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				41D63D992147071200C866B3 /* IGListKitImplementer.app */,
+				41B0A53B21472136002C23DA /* IGListKitImplementerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,10 +132,14 @@
 			children = (
 				41D63D9C2147071200C866B3 /* AppDelegate.swift */,
 				41D63D9E2147071200C866B3 /* ViewController.swift */,
+				41B0A51121470797002C23DA /* IGListKitImplementer.swift */,
 				41D63DA02147071200C866B3 /* Main.storyboard */,
 				41D63DA32147071400C866B3 /* Assets.xcassets */,
 				41D63DA52147071400C866B3 /* LaunchScreen.storyboard */,
 				41D63DA82147071400C866B3 /* Info.plist */,
+				41B0A517214716FC002C23DA /* ElementSectionController.swift */,
+				41B0A5132147167E002C23DA /* ElementCollectionViewCell.swift */,
+				41B0A5142147167E002C23DA /* ElementCollectionViewCell.xib */,
 			);
 			path = IGListKitImplementer;
 			sourceTree = "<group>";
@@ -67,13 +147,33 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		41B0A53A21472136002C23DA /* IGListKitImplementerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 41B0A54221472136002C23DA /* Build configuration list for PBXNativeTarget "IGListKitImplementerTests" */;
+			buildPhases = (
+				41B0A53721472136002C23DA /* Sources */,
+				41B0A53821472136002C23DA /* Frameworks */,
+				41B0A53921472136002C23DA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				41B0A54121472136002C23DA /* PBXTargetDependency */,
+			);
+			name = IGListKitImplementerTests;
+			productName = IGListKitImplementerTests;
+			productReference = 41B0A53B21472136002C23DA /* IGListKitImplementerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		41D63D982147071200C866B3 /* IGListKitImplementer */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 41D63DAB2147071400C866B3 /* Build configuration list for PBXNativeTarget "IGListKitImplementer" */;
 			buildPhases = (
+				7461B6EE67DCC8207B60B5EE /* [CP] Check Pods Manifest.lock */,
 				41D63D952147071200C866B3 /* Sources */,
 				41D63D962147071200C866B3 /* Frameworks */,
 				41D63D972147071200C866B3 /* Resources */,
+				6D6397B6F201A0965076150C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -94,6 +194,10 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = Qeeptouch;
 				TargetAttributes = {
+					41B0A53A21472136002C23DA = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 41D63D982147071200C866B3;
+					};
 					41D63D982147071200C866B3 = {
 						CreatedOnToolsVersion = 9.4.1;
 					};
@@ -113,11 +217,19 @@
 			projectRoot = "";
 			targets = (
 				41D63D982147071200C866B3 /* IGListKitImplementer */,
+				41B0A53A21472136002C23DA /* IGListKitImplementerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		41B0A53921472136002C23DA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		41D63D972147071200C866B3 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -125,22 +237,81 @@
 				41D63DA72147071400C866B3 /* LaunchScreen.storyboard in Resources */,
 				41D63DA42147071400C866B3 /* Assets.xcassets in Resources */,
 				41D63DA22147071200C866B3 /* Main.storyboard in Resources */,
+				41B0A5162147167E002C23DA /* ElementCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6D6397B6F201A0965076150C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-IGListKitImplementer/Pods-IGListKitImplementer-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/IGListKit/IGListKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IGListKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IGListKitImplementer/Pods-IGListKitImplementer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7461B6EE67DCC8207B60B5EE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-IGListKitImplementer-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		41B0A53721472136002C23DA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				41B0A53E21472136002C23DA /* IGListKitImplementerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		41D63D952147071200C866B3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				41D63D9F2147071200C866B3 /* ViewController.swift in Sources */,
+				41B0A51221470797002C23DA /* IGListKitImplementer.swift in Sources */,
+				41B0A518214716FC002C23DA /* ElementSectionController.swift in Sources */,
 				41D63D9D2147071200C866B3 /* AppDelegate.swift in Sources */,
+				41B0A5152147167E002C23DA /* ElementCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		41B0A54121472136002C23DA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 41D63D982147071200C866B3 /* IGListKitImplementer */;
+			targetProxy = 41B0A54021472136002C23DA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		41D63DA02147071200C866B3 /* Main.storyboard */ = {
@@ -162,6 +333,46 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		41B0A54321472136002C23DA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WHLMQ3889S;
+				INFOPLIST_FILE = IGListKitImplementerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.qeeptouch.IGListKitImplementerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IGListKitImplementer.app/IGListKitImplementer";
+			};
+			name = Debug;
+		};
+		41B0A54421472136002C23DA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WHLMQ3889S;
+				INFOPLIST_FILE = IGListKitImplementerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.qeeptouch.IGListKitImplementerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IGListKitImplementer.app/IGListKitImplementer";
+			};
+			name = Release;
+		};
 		41D63DA92147071400C866B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -278,9 +489,11 @@
 		};
 		41D63DAC2147071400C866B3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3E77385EAA99CCB902E82CB3 /* Pods-IGListKitImplementer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WHLMQ3889S;
 				INFOPLIST_FILE = IGListKitImplementer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -295,9 +508,11 @@
 		};
 		41D63DAD2147071400C866B3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BA636B1D2FAEE29BC5BFCA4 /* Pods-IGListKitImplementer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = WHLMQ3889S;
 				INFOPLIST_FILE = IGListKitImplementer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -313,6 +528,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		41B0A54221472136002C23DA /* Build configuration list for PBXNativeTarget "IGListKitImplementerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				41B0A54321472136002C23DA /* Debug */,
+				41B0A54421472136002C23DA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		41D63D942147071200C866B3 /* Build configuration list for PBXProject "IGListKitImplementer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
