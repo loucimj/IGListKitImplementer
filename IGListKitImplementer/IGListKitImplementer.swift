@@ -14,6 +14,9 @@ protocol IGListKitImplementer: ListAdapterDataSource {
     var collectionView: UICollectionView! { get set }
     var data: Array<ListDiffable> { get set }
     var adapter: ListAdapter { get set }
+    var emptyStateView: UIView? { get set }
+    var loaderView: UIView? { get set }
+    var isLoadingData: Bool { get set }
     
     func prepareDataForAdapter()
     func getData()
@@ -31,7 +34,15 @@ extension IGListKitImplementer where Self: ListAdapterDataSource {
         adapter.performUpdates(animated: true, completion: completionBlock)
     }
 
-
+    func getEmptyView() -> UIView? {
+        if isLoadingData, let view = loaderView {
+            return view
+        }
+        if !isLoadingData, let view = emptyStateView {
+            return view
+        }
+        return nil
+    }
 }
 
 extension IGListKitImplementer where Self: ListAdapterDataSource, Self: UIScrollViewDelegate {
@@ -42,4 +53,8 @@ extension IGListKitImplementer where Self: ListAdapterDataSource, Self: UIScroll
         adapter.scrollViewDelegate = self
     }
 
+}
+
+protocol IGListKitImplementerDelegate {
+    
 }

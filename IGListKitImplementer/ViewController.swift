@@ -17,7 +17,10 @@ class ViewController: UIViewController {
     lazy var adapter: ListAdapter = {
         return ListAdapter(updater: ListAdapterUpdater(), viewController: self)
     }()
-    
+    var emptyStateView: UIView?
+    var loaderView: UIView?
+    var isLoadingData: Bool = false
+
     var titles:Array<String> = Array<String>()
 
     class func initFromStoryboard() -> ViewController {
@@ -46,6 +49,7 @@ class ViewController: UIViewController {
 }
 //MARK: - IGListKitImplementer
 extension ViewController: IGListKitImplementer {
+    
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         return data
     }
@@ -65,6 +69,10 @@ extension ViewController: IGListKitImplementer {
     }
     
     func listAdapter(_ listAdapter: ListAdapter, sectionControllerFor object: Any) -> ListSectionController {
+        //If its a common object
+        if let sectionController = getListSectionController(for: object, delegate: self) {
+            return sectionController
+        }
         switch object {
         case is String:
             return ElementSectionController(delegate: self)
@@ -74,12 +82,12 @@ extension ViewController: IGListKitImplementer {
     }
     
     func emptyView(for listAdapter: ListAdapter) -> UIView? {
-        return nil
+        return getEmptyView()
     }
 }
 //MARK: - ElementSectionControllerDelegate
-extension ViewController: ElementSectionControllerDelegate {
-    func userHasSelectedElement(element: String) {
-        print(element)
+extension ViewController: IGListKitSelectionDelegate {
+    func userHasSelectedObject(object: Any) {
+        print(object)
     }
 }

@@ -9,19 +9,15 @@
 import Foundation
 import IGListKit
 
-protocol ElementSectionControllerDelegate {
-    func userHasSelectedElement(element:String)
-}
-
 class ElementSectionController: ListSectionController {
     
-    convenience init(delegate: ElementSectionControllerDelegate) {
+    convenience init(delegate: IGListKitSelectionDelegate) {
         self.init()
         self.delegate = delegate
     }
     
     var data:String?
-    var delegate:ElementSectionControllerDelegate?
+    var delegate:IGListKitSelectionDelegate?
     
     override func sizeForItem(at index: Int) -> CGSize {
         let width = collectionContext!.containerSize.width
@@ -45,7 +41,7 @@ class ElementSectionController: ListSectionController {
     
     override func didSelectItem(at index: Int) {
         guard self.data != nil else { return }
-        delegate?.userHasSelectedElement(element: self.data!)
+        delegate?.userHasSelectedObject(object: self.data!)
     }
     
 }
