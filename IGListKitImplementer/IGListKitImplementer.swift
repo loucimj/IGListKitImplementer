@@ -54,7 +54,3 @@ extension IGListKitImplementer where Self: ListAdapterDataSource, Self: UIScroll
     }
 
 }
-
-protocol IGListKitImplementerDelegate {
-    
-}
