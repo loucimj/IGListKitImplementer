@@ -41,8 +41,8 @@ class IGListKitImplementerTests: XCTestCase, IGListKitImplementerTester {
             "test4" as ListDiffable
         ]
         injectData(viewController: viewController, data: objects) { completed in
-            XCTAssertEqual(self.getQuantityOfObjectsRendered(viewController: self.viewController), objects.count)
             validation.fulfill()
+            XCTAssertEqual(self.getQuantityOfObjectsRendered(viewController: self.viewController), objects.count)
         }
         self.waitForExpectations(timeout: 10) { error in
             
@@ -50,16 +50,24 @@ class IGListKitImplementerTests: XCTestCase, IGListKitImplementerTester {
     }
     func testLoader() {
         let validation = expectation(description: "Async Test")
-        let objects = [
-            "test1" as ListDiffable,
-            "test2" as ListDiffable,
-            "test3" as ListDiffable,
-            "test4" as ListDiffable
-        ]
-        injectData(viewController: viewController, data: objects) { completed in
-            XCTAssertEqual(self.getQuantityOfObjectsRendered(viewController: self.viewController), objects.count)
+
+        setInLoadingMode(viewController: viewController) { completed in
             validation.fulfill()
+            XCTAssertTrue(self.isShowingLoaderView(viewController: self.viewController))
         }
+        
+        self.waitForExpectations(timeout: 10) { error in
+            
+        }
+    }
+    func testEmptyState() {
+        let validation = expectation(description: "Async Test")
+        
+        setInEmptyStateMode(viewController: viewController) { completed in
+            validation.fulfill()
+            XCTAssertTrue(self.isShowingEmptyView(viewController: self.viewController))
+        }
+        
         self.waitForExpectations(timeout: 10) { error in
             
         }

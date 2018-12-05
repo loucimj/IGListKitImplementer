@@ -25,4 +25,20 @@ extension IGListKitImplementerTester {
         }
         return totalItems
     }
+    func setInLoadingMode(viewController: IGListKitImplementer, completionBlock: ListUpdaterCompletion? = nil) {
+        viewController.isLoadingData = true
+        viewController.data.removeAll()
+        viewController.reloadData(completionBlock: completionBlock)
+    }
+    func isShowingLoaderView(viewController: IGListKitImplementer) -> Bool {
+        return true
+    }
+    func setInEmptyStateMode(viewController: IGListKitImplementer, completionBlock: ListUpdaterCompletion? = nil) {
+        viewController.isLoadingData = false
+        viewController.data.removeAll()
+        viewController.reloadData(completionBlock: completionBlock)
+    }
+    func isShowingEmptyView(viewController: IGListKitImplementer) -> Bool {
+        return true
+    }
 }
