@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		4111BF6D21ADBE6A00CCE50B /* IGListKitImplementer+Local.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4111BF6C21ADBE6A00CCE50B /* IGListKitImplementer+Local.swift */; };
 		411926CB21B80CE6009C3495 /* IGListKitImplementerTester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411926C921B80CDD009C3495 /* IGListKitImplementerTester.swift */; };
-		411926CC21B80EB9009C3495 /* IGListKitImplementer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0A51121470797002C23DA /* IGListKitImplementer.swift */; };
 		41B0A51221470797002C23DA /* IGListKitImplementer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0A51121470797002C23DA /* IGListKitImplementer.swift */; };
 		41B0A5152147167E002C23DA /* ElementCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B0A5132147167E002C23DA /* ElementCollectionViewCell.swift */; };
 		41B0A5162147167E002C23DA /* ElementCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 41B0A5142147167E002C23DA /* ElementCollectionViewCell.xib */; };
@@ -343,7 +342,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				411926CB21B80CE6009C3495 /* IGListKitImplementerTester.swift in Sources */,
-				411926CC21B80EB9009C3495 /* IGListKitImplementer.swift in Sources */,
 				41B0A53E21472136002C23DA /* IGListKitImplementerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -25,11 +25,6 @@ class IGListKitImplementerTests: XCTestCase, IGListKitImplementerTester {
         
         viewController = ViewController.initFromStoryboard()
         viewController.loadViewIfNeeded()
-        for view in viewController.view.subviews {
-            if view is UICollectionView {
-                self.collectionView = view as? UICollectionView
-            }
-        }
     }
     
     override func tearDown() {
@@ -37,46 +32,36 @@ class IGListKitImplementerTests: XCTestCase, IGListKitImplementerTester {
         super.tearDown()
     }
     
-    func testImplementations() {
-        guard let _ = viewController as? IGListKitSelectionDelegate else {
-            XCTAssertTrue(false)
-            return
-        }
-        guard let viewController2 = viewController as? IGListKitImplementer else {
-            XCTAssertTrue(false)
-            return
-        }
-        
-        XCTAssertTrue(true)
-        
-    }
-    
-    func testElements() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        let validation = expectation(description: "Async Test")
-
-        viewController.titles = prepareTestElements()
-        viewController.prepareDataForAdapter()
-        viewController.reloadData(completionBlock: { completed in
-            XCTAssertTrue(self.collectionView!.numberOfSections == 2)
-            validation.fulfill()
-        })
-        self.waitForExpectations(timeout: 10) { error in
-            
-        }
-    }
     func testDisplayingFourElements() {
+        let validation = expectation(description: "Async Test")
         let objects = [
             "test1" as ListDiffable,
             "test2" as ListDiffable,
             "test3" as ListDiffable,
             "test4" as ListDiffable
         ]
-        XCTAssertEqual(testInjectAndGetQuantity(implementer: viewController! as! IGListKitImplementer, objects: objects), objects.count)
+        injectData(viewController: viewController, data: objects) { completed in
+            XCTAssertEqual(self.getQuantityOfObjectsRendered(viewController: self.viewController), objects.count)
+            validation.fulfill()
+        }
+        self.waitForExpectations(timeout: 10) { error in
+            
+        }
     }
-    func testInjectAndGetQuantity(implementer: IGListKitImplementer, objects: [ListDiffable]) -> Int {
-        injectData(viewController: implementer, data: objects)
-        return getQuantityOfObjectsRendered(viewController: implementer)
+    func testLoader() {
+        let validation = expectation(description: "Async Test")
+        let objects = [
+            "test1" as ListDiffable,
+            "test2" as ListDiffable,
+            "test3" as ListDiffable,
+            "test4" as ListDiffable
+        ]
+        injectData(viewController: viewController, data: objects) { completed in
+            XCTAssertEqual(self.getQuantityOfObjectsRendered(viewController: self.viewController), objects.count)
+            validation.fulfill()
+        }
+        self.waitForExpectations(timeout: 10) { error in
+            
+        }
     }
 }
