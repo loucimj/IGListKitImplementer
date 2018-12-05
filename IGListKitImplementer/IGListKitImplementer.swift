@@ -23,13 +23,13 @@ protocol IGListKitImplementer: ListAdapterDataSource {
     func reloadData(completionBlock:ListUpdaterCompletion?) 
 }
 
-extension IGListKitImplementer where Self: ListAdapterDataSource {
+extension IGListKitImplementer {
 
     func setupIGListKit() {
         adapter.collectionView = collectionView
         adapter.dataSource = self
     }
-    
+
     func reloadData(completionBlock:ListUpdaterCompletion? = nil ) {
         adapter.performUpdates(animated: true, completion: completionBlock)
     }
@@ -45,7 +45,7 @@ extension IGListKitImplementer where Self: ListAdapterDataSource {
     }
 }
 
-extension IGListKitImplementer where Self: ListAdapterDataSource, Self: UIScrollViewDelegate {
+extension IGListKitImplementer where Self: UIScrollViewDelegate {
 
     func setupIGListKit() {
         adapter.collectionView = collectionView

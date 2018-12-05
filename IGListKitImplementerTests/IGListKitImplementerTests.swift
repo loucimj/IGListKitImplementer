@@ -11,7 +11,7 @@ import XCTest
 @testable import IGListKitImplementer
 @testable import IGListKit
 
-class IGListKitImplementerTests: XCTestCase {
+class IGListKitImplementerTests: XCTestCase, IGListKitImplementerTester {
     
     var viewController:ViewController!
     var collectionView:UICollectionView?
@@ -38,8 +38,16 @@ class IGListKitImplementerTests: XCTestCase {
     }
     
     func testImplementations() {
-        XCTAssertTrue(viewController is IGListKitImplementer)
-        XCTAssertTrue(viewController is ElementSectionControllerDelegate)
+        guard let _ = viewController as? IGListKitSelectionDelegate else {
+            XCTAssertTrue(false)
+            return
+        }
+        guard let viewController2 = viewController as? IGListKitImplementer else {
+            XCTAssertTrue(false)
+            return
+        }
+        
+        XCTAssertTrue(true)
         
     }
     
@@ -58,5 +66,17 @@ class IGListKitImplementerTests: XCTestCase {
             
         }
     }
-    
+    func testDisplayingFourElements() {
+        let objects = [
+            "test1" as ListDiffable,
+            "test2" as ListDiffable,
+            "test3" as ListDiffable,
+            "test4" as ListDiffable
+        ]
+        XCTAssertEqual(testInjectAndGetQuantity(implementer: viewController! as! IGListKitImplementer, objects: objects), objects.count)
+    }
+    func testInjectAndGetQuantity(implementer: IGListKitImplementer, objects: [ListDiffable]) -> Int {
+        injectData(viewController: implementer, data: objects)
+        return getQuantityOfObjectsRendered(viewController: implementer)
+    }
 }

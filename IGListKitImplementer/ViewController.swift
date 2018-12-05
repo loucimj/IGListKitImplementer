@@ -9,7 +9,7 @@
 import UIKit
 import IGListKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, IGListKitImplementer {
 
     @IBOutlet weak var collectionView: UICollectionView!
     
@@ -45,11 +45,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
-}
-//MARK: - IGListKitImplementer
-extension ViewController: IGListKitImplementer {
-    
     func objects(for listAdapter: ListAdapter) -> [ListDiffable] {
         return data
     }
@@ -77,14 +72,17 @@ extension ViewController: IGListKitImplementer {
         case is String:
             return ElementSectionController(delegate: self)
         default:
-            return ListSectionController()
+            fatalError("missing section implementation")
         }
+        return ListSectionController()
     }
     
     func emptyView(for listAdapter: ListAdapter) -> UIView? {
         return getEmptyView()
     }
+
 }
+
 //MARK: - ElementSectionControllerDelegate
 extension ViewController: IGListKitSelectionDelegate {
     func userHasSelectedObject(object: Any) {
